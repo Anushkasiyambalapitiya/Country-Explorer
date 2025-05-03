@@ -52,7 +52,7 @@ const SignIn = () => {
       <div className="w-full md:w-1/2 flex items-center justify-center p-8 bg-white dark:bg-gray-900">
         <form className="w-full max-w-sm" onSubmit={handleSubmit}>
           <div className="mb-5">
-            <h4 className="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            <h4 className="mb-4 text-4xl font-bold tracking-tight leading-none text-blue-900 md:text-5xl lg:text-6xl dark:text-white">
               Sign In
             </h4>
             <label htmlFor="email" className="block mt-5 mb-2 text-sm font-medium text-gray-900 dark:text-white">
