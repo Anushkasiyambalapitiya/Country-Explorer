@@ -1,3 +1,4 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -8,8 +9,8 @@ export default defineConfig({
     tailwindcss()
   ],
   build: {
-    outDir: 'dist', // Change this to match what Vercel expects
+    outDir: 'dist', // Changed from 'build' to 'dist'
     emptyOutDir: true
   },
-  base: './' // Important for correct asset paths
+  base: './' // Ensures relative paths for assets
 })

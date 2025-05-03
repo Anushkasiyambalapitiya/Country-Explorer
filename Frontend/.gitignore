@@ -7,10 +7,28 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-**/node_modules/
-dist
-dist-ssr
-*.local
+# Build directories
+/dist
+/dist-ssr
+/build
+/.vercel
+/.cache
+
+# Dependencies
+/node_modules
+/.pnpm-store
+/.yarn/cache
+/.yarn/unplugged
+/.yarn/build-state.yml
+/.yarn/install-state.gz
+.pnp.*
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +40,25 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# System Files
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# Debug files
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage
+.nyc_output
+
+# Misc
+*.tmp
+*.bak
+*.patch
+*.diff
+*.orig
+*.rej
