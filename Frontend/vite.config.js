@@ -1,16 +1,22 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss()
-  ],
+  plugins: [react()],
   build: {
-    outDir: 'dist', // Changed from 'build' to 'dist'
-    emptyOutDir: true
+    outDir: 'dist',
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        entryFileNames: 'assets/[name]-[hash].js'
+      }
+    }
   },
-  base: './' // Ensures relative paths for assets
+  base: '/', // Changed from './' to '/'
+  server: {
+    headers: {
+      'Content-Type': 'application/javascript'
+    }
+  }
 })
