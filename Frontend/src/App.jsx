@@ -24,7 +24,7 @@ function App() {
      </div> */}
      <UserProvider>
  <CountryProvider>
-     <BrowserRouter>
+ <BrowserRouter basename="/">
   
      <HeaderNavbar /> {/* ✅ Display it here */}
      <Routes>
