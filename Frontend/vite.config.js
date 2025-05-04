@@ -1,22 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    outDir: 'dist',
-    emptyOutDir: true,
-    rollupOptions: {
-      output: {
-        assetFileNames: 'assets/[name]-[hash][extname]',
-        entryFileNames: 'assets/[name]-[hash].js'
-      }
-    }
-  },
-  base: '/', // Changed from './' to '/'
-  server: {
-    headers: {
-      'Content-Type': 'application/javascript'
-    }
-  }
-})
+  base: process.env.VITE_BASE_PATH || "/Country-Explorer"
+});
